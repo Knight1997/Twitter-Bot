@@ -8,10 +8,10 @@ Created on Tue Dec 18 06:28:59 2018
 import tweepy
 import time
 
-CONSUMER_KEY='ysvqCFn7aEEpR6W8fNePMRxoK'
-CONSUMER_SECRET='NOg27fr7BHw2ZCbbsnyCTPp0zmjk16rk9C0w1MJGAfqVvMURXq'
-ACCESS_KEY='223796937-DLIS14oo7dYXWUF2ondgAEYk1NL4F5GrcsiFSa3A'
-ACCESS_SECRET='HxElCbiak72rz8xwxLhD52xuCURXbzfbJuJIMyKjNVoJ7'
+CONSUMER_KEY=''
+CONSUMER_SECRET=''
+ACCESS_KEY=''
+ACCESS_SECRET=''
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
@@ -33,7 +33,7 @@ def store_last_seen_id(last_seen_id, file_name):
     return
 
 def reply_tweets():
-    
+    print('Retriving and replying to tweets!!')
     last_seen_id=get_last_seen_id(FILE_NAME)
     mentions=api.mentions_timeline(last_seen_id, tweet_mode='extended')
     
