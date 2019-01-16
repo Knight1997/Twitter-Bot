@@ -8,10 +8,10 @@ Created on Tue Dec 18 06:28:59 2018
 import tweepy
 import time
 
-CONSUMER_KEY=''
-CONSUMER_SECRET=''
-ACCESS_KEY=''
-ACCESS_SECRET=''
+CONSUMER_KEY='Qxwh9TYP8UV7gsuSnQEd3digt'
+CONSUMER_SECRET='RIYxo0VUQlw6T7G8yHYr9ZCFGRjNA00uynwaETbd1VRiBWJHDW'
+ACCESS_KEY='223796937-9Q9pb8gDytjMKyt4EbGFjv9UnjSQ3LorFG2CPtcK'
+ACCESS_SECRET='5rlmnHIerqUOsQcWpW2tKy9IMqWm0TuQrJa8zcGTXt9vt'
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
@@ -41,7 +41,8 @@ def reply_tweets():
         print(str(mention.id)+' --> '+ mention.full_text)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id,FILE_NAME)
-        if '#helloworld' in mention.full_text.lower():
+        if '#helloknight' in mention.full_text.lower():
+            print('replying to @' + mention.user.screen_name)
             api.update_status('@' + mention.user.screen_name + ' Build you own castle! ', mention.id)
     
 while(True):
