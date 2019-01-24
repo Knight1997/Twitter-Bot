@@ -10,3 +10,5 @@ Business: In marketing field companies use it to develop their strategies, to un
 products.
 Politics: In political field, it is used to keep track of political view, to detect consistency and inconsistency between statements and actions at the government level. It can be used to predict election results as well!
 Public Actions: Sentiment analysis also is used to monitor and analyse social phenomena, for the spotting of potentially dangerous situations and determining the general mood of the blogosphe
+
+We are now planning to start auto reply using NLP and dialog flow api, for effective tweet's reply.
